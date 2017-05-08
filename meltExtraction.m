@@ -106,7 +106,7 @@ function [Shoulder,Crust,Cryptic] = meltExtraction(Geometry,Res,Shoulder,Extract
 % % initial 1D coordinate system
 warning off all
 nPlateBoundarySampling=ceil(sum(Geometry.PlateBoundaryLength)/Res.Axis);
-AlongPlateBoundaryCoordinate=linspace(0,sum(Geometry.PlateBoundaryLength),nPlateBoundarySampling);
+AlongPlateBoundaryCoordinate=linspace(0,sum(Geometry.PlateBoundaryLength),nPlateBoundarySampling+1);
 % % initial crust and cryptic crust structure
 Crust.Thickness=AlongPlateBoundaryCoordinate*0;
 Crust.AverageMeltFraction=AlongPlateBoundaryCoordinate*0;
